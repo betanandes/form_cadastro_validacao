@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="avf_3.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> -->
+    <title>Avaliação Formadora 2</title>
+
+    
+    <script>
+        
+        function confereSenha(){
+            const senha = document.querySelector('input[name=senha]');
+            const confirma= document.querySelector('input[name=confirma]');
+
+            if(confirma.value==senha.value){
+                confirma.setCustomValidity('');
+            }else{
+                confirma.setCustomValidity('As senhas não conferem');
+            }
+        }
+
+        
+
+
+
+
+
+    </script>
+
+    
+
+</head>
+<body>
+    <div class="container">
+        <div id="logo">
+            <img src="img/logo.png" width="300" alt="">
+        </div>
+
+        <form class="formContent" id="form" action="https://login.unisuam.edu.br/login" >
+            <div class="info">
+                <h1>Cadastre-se</h1>
+                <!-- <h2>Informações Pessoais</h2> -->
+                <div>
+                    <p>Nome</p>
+                    <input type="text" class="texto" name="nome" id="nome" placeholder="Digite seu nome completo" minlength="10">
+                </div>
+                <div>
+                    <p>Idade</p>
+                    <input type="text" class="texto" name="idade" id="idade" placeholder="Digite sua idade" >
+                </div>
+                <div>
+                    <p>Endereço</p>
+                    <input type="text" class="texto" name="endereco" id="endereco" placeholder="Digite seu endereço" >
+                </div>
+
+                <div>
+                    <p>Login</p>
+                    <input type="text" class="texto" name="login"  id="login" placeholder="Digite seu login" minlength="5" maxlength="5" >
+                </div>
+
+                <div>
+                    <p>Senha</p>
+                    <input type="password" class="texto" id="senha1" name="senha" placeholder="Senha" minlength="8" maxlength="8" onchange='confereSenha();'>
+                </div>
+
+                <div>
+                    <p>Confirme sua senha</p>
+                    <input type="password" class="texto" id="senha2" name="confirma" placeholder="Repita a senha" minlength="8" maxlength="8" onchange='confereSenha();' >
+                </div>
+
+            <div id="butao">
+                    <input type="submit" class="butao" value="Enviar">
+                <input type="reset"  class="butao" value="Limpar">
+            </div>
+            <p class="copyright">© Feito por Roberta Fernandes.</p>
+        </form>
+
+        <script src="script.js"></script>
+    </div>
+
+</body>
+</html>
